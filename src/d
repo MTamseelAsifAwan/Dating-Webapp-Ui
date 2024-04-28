@@ -1,0 +1,86 @@
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Stack, Badge ,Nav,Card} from 'react-bootstrap';
+import { FaUserCircle, FaFilter } from 'react-icons/fa'; // Import FontAwesome icon for the profile icon
+import './home.css';
+import logo2 from './imges/pexels-mikhail-nilov-6530545.jpg'
+
+function AutoLayoutExample() {
+  return (
+    <Container className='all'>
+      <Row>
+        <Col xs={3}>
+          <Stack gap={3}>
+            <div className="p-2">
+              <FaUserCircle size={50} />
+              <div>John Doe</div>
+              <div>Popularity: Low</div>
+            </div>
+            <div className="p-2">
+              <Badge bg="primary">Visitors: 100</Badge>
+              <Badge bg="success">Likes: 50</Badge>
+              <Badge bg="info">Friends: 20</Badge>
+            </div>
+            <div>
+              <Nav variant="tabs" defaultActiveKey="/find-matches" className="flex-column">
+                <Nav.Item>
+                  <Nav.Link href="/find-matches">Find Matches</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href="/matches">Matches</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href="/visitors">Visitors</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href="/gifts">Gifts</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href="/people-i-like">People I Like</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href="/people-i-hate">People I Hate</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </div>
+          </Stack>
+        </Col>
+        <Col xs={3}>
+          <div className="profile-container">
+            <div className="profile-logo">
+              <p>Just for you</p>
+              <FaUserCircle size={40} />
+            </div>
+            <div className="profile-name">John Doe</div>
+            <div className="filter-option">
+              <FaFilter size={20} />
+              Filters
+            </div>
+          </div>
+        </Col>
+        <Col xs={3}>
+          <div className="card-container" style={{marginRight:'20px'}}>
+            <Card>
+              <Card.Img variant="top" src={logo2} />
+            </Card>
+          </div>
+        </Col>
+        <Col xs={3}>
+          <div className="card-container">
+            <Card>
+              <Card.Img variant="top" src={logo2} />
+            </Card>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>1 of 3</Col>
+        <Col>2 of 3</Col>
+        <Col>3 of 3</Col>
+      </Row>
+    </Container>
+  );
+}
+
+export default AutoLayoutExample;

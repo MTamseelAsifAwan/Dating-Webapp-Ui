@@ -1,0 +1,43 @@
+.profile-card {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 20px;
+  }
+  
+  .profile-card-content {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .profile-image {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .profile-name {
+    color: white;
+  }
+  
+  .profile-buttons {
+    position: absolute;
+    bottom: -24px;
+    left: 20px;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .profile-button {
+    margin-right: 20px;
+  }
+  
+  .profile-info {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 20px;
+  }
+  
